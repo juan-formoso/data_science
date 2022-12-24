@@ -12,3 +12,5 @@ int main() {
 
   return 0;
 }
+
+// A impressãoserá feita em hexadecimal, pois foi utilizado o especificador "%x".
