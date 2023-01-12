@@ -1,0 +1,4 @@
+stdio.h -> operações de input e output
+stdlib.h -> alocação dinâmica de memória
+stdbool.h -> uso do tipo de dados "bool"
+assert.h -> uso de instrução "assert"
