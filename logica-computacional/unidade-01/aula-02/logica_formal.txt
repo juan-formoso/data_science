@@ -1,0 +1,20 @@
+"~" = O til corresponde à operação lógica NEGAÇÃO. Alguns autores também utilizam o símbolo <-- para designar negação.
+
+"^" = A cunha corresponde à operação lógica CONJUNÇÃO. Em programação, a conjução é representada pela palavra AND, ou pelo símbolo &, que corresponde ao conectivo e.
+
+"v" = A letra v corresponde à operação lógica DISJUNÇÃO. Equivale à palavra ou em seu sentido inclusivo. Em programação, a conjunção é também representada pela palavra OR.
+
+"->" = A seta corresponde à operação CONDICIONAL. Em português, corresponde à relação "se ..., então...".
+
+"<->" = A dupla seta corresponde à operação BICONDICIONAL. Em portugês, corresponde à relação "se, e somente se, ...".
+
+-------------------------------------------------------
+
+Considere a proposição "João não é gaúcho e Jaime não é paulista."
+
+p: João é gaúcho e 
+q: Jaime é paulista.
+
+Podemos utilizar os operadores lógicos para escrever: ~p ^ ~q
+
+Negamos p e q, utilizando o conectivo "e" de acordo com os símbolos apresentados no quadro acima.
