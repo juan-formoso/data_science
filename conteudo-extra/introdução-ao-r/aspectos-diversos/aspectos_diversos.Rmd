@@ -1,0 +1,45 @@
+---
+Exercício da Aula - Aspectos Diversos (Prática em R)
+---
+
+Diretório de Trabalho
+```{r}
+getwd()
+setwd("/home/usuario/Documentos/Projects")
+```
+
+Tipo do Objeto
+```{r}
+class(iris)
+```
+
+Salvar um objeto
+```{r}
+#clonar
+iris_copia = iris
+
+#salvar
+save(iris_copia, file="iris_copia.Rdata")
+
+#remove do R
+rm(iris_copia)
+
+#testando a remoção
+iris_copia
+```
+
+Carregar
+```{r}
+#Carregando o objeto do disco
+load(file="iris_copia.Rdata")
+
+#testando
+iris_copia
+```
+
+Vetor e Gráfico Básico
+```{r}
+x = c(12, 39, 50, 100)
+y = c(1, 20, 46, 92)
+plot(x, y)
+```
