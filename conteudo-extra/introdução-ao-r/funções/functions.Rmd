@@ -1,0 +1,16 @@
+---
+title: "Exercício da Aula - Funções (Prática em R)"
+output: html_notebook
+---
+
+```{r}
+getwd()
+
+#Sem parênteses
+sd
+
+head(x=iris, n=2)
+head(iris, 2)
+head(iris)
+head(n=22)
+```
