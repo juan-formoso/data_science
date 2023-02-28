@@ -1,0 +1,13 @@
+---
+title: "Exercício da aula - Ajuda (Prática em R)"
+output: html_notebook
+---
+
+```{r}
+help(sd)
+
+x = c(180L, 219L, 200L)
+  
+as.factor(x)
+head(iris)
+```
