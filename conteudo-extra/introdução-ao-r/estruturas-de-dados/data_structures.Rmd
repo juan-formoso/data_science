@@ -1,0 +1,83 @@
+---
+title: "Exercício da Aula - Estrutura de Dados (Prática em R)"
+output: html_notebook
+---
+
+Vetores
+```{r}
+vector_x = c(10, 20, 30, 40, 50, 60)
+vector_x
+vector_x[1]
+vector_x[1] = 9
+vector_x[1]
+```
+Vetores de outros tipos
+```{r}
+vector_y = c("Jax", "Camille", "Fiora")
+vector_y
+
+vector_z = c(1L, 2L, 3L)
+vector_z
+
+vector_a = c(T, F, F, T, F)
+vector_a
+
+class(vector_y)
+class(vector_z)
+class(vector_a)
+```
+Matrizes - Pt.1
+```{r}
+VADeaths
+colnames(VADeaths)
+rownames(VADeaths)
+```
+Matrizes - Pt.2
+```{r}
+#Somente coluna
+VADeaths[,1]
+
+#Somente linha
+VADeaths[1,]
+
+#Linhas e/ou colunas específicas
+VADeaths[1:3, 4]
+VADeaths[c(1, 2, 5),]
+```
+Data Frame
+```{r}
+longley
+
+#Funciona como uma matriz de vários tipos
+longley[1:3,]
+
+#Acessar coluna com $
+longley$Unemployed
+#Acessar coluna via nome
+longley["Unemployed"]
+```
+Listas
+```{r}
+ability.cov
+
+#Acessando elementos
+ability.cov$cov
+ability.cov[1]
+
+#Verificando se são objetos diferentes
+class(ability.cov$cov)
+class(ability.cov$center)
+
+#Acessando elemento dentro da lista
+ability.cov$cov[1:3,]
+```
+
+Fatores
+```{r}
+state.region
+
+CargaHoraria = as.factor(c(110, 220, 550, 220, 110, 220))
+summary(CargaHoraria)
+mode(CargaHoraria)
+class(CargaHoraria)
+```

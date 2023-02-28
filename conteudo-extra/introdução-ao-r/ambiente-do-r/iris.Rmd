@@ -1,0 +1,19 @@
+---
+title: "Exercício Aula - Ambiente do R"
+output: html_notebook
+---
+
+```{r}
+library(e1071)
+```
+
+```{r}
+#descarregar pacote
+detach("package:e1071", unload=TRUE)
+#remover
+remove.packages("e1071")
+```
+```{r}
+plot(iris[,1:4])
+print("R")
+```
