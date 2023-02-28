@@ -1,0 +1,54 @@
+---
+title: "Exercício da Aula - Principais Funções (Prática em R)"
+output: html_notebook
+---
+
+Head e Tail
+```{r}
+esoph
+
+#default 6 linhas
+head(esoph)
+tail(esoph)
+
+#especificando linhas
+head(esoph, n=10)
+tail(esoph, n=7)
+```
+
+Dimensões
+```{r}
+dim(esoph)
+
+#retornando apenas linhas ou colunas
+dim(esoph)[1]
+dim(esoph)[2]
+```
+
+Comprimento
+```{r}
+#utilizado com vetores, mas caso use em bidimensionais irá retornar as colunas
+length(islands)
+length(esoph)
+```
+
+Nome de Colunas
+```{r}
+colnames(esoph)
+```
+
+Nome de Linhas
+```{r}
+rownames(esoph)
+```
+
+Resumo Estatístico
+```{r}
+summary(esoph)
+```
+
+Escolher Arquivo
+```{r}
+x = file.choose()
+x
+```
