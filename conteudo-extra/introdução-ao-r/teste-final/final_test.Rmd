@@ -1,0 +1,51 @@
+---
+title: "Exercício Final do Bloco - Introdução ao R"
+output: html_notebook
+---
+Atividade 1
+```{r}
+idade_ana <- 8L
+idade_paulo <- 12L
+
+if (idade_ana > idade_paulo) {
+  print("A menina é mais velha.")
+} else {
+  print("O menino é mais velho.")
+}
+```
+Atividade 2
+```{r}
+class(BOD)
+```
+Atividade 3
+```{r}
+numbers <- 1:10
+
+for (i in numbers) {
+  if (i %% 2 == 0) {
+    print(i)
+  }
+}
+```
+Atividade 4
+```{r}
+tail(women, n=10)
+```
+Atividade 5
+```{r}
+data(iris)
+iris_subset <- iris[50:100, c("Sepal.Width", "Petal.Length")]
+plot(iris_subset$Sepal.Width, iris_subset$Petal.Length, main = "Iris Database Subset", xlab = "Sepal Width", ylab = "Petal Length")
+```
+Atividade 6
+```{r}
+vetor_1 <- 1:3
+vetor_2 <- 1:3
+print(vetor_1 + vetor_2)
+```
+Atividade 7
+```{r}
+dim(CO2)
+colnames(CO2)
+rownames(CO2)
+```
