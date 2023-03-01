@@ -1,0 +1,25 @@
+---
+title: "Exercício da Aula - Importando Dados (Prática em R)"
+output: html_notebook
+---
+
+Instalando e Carregando Pacote
+```{r}
+#install.packages("openxlsx")
+library(openxlsx)
+```
+
+Texto
+```{r}
+#if not in the work directory:
+#csv_file = read.csv(file.choose(), header = TRUE, sep = ",")
+#csv_file
+csv_file = read.csv("Credit.csv", header = TRUE, sep = ",")
+csv_file
+```
+
+Excel
+```{r}
+excel_file = read.xlsx("Credit.xlsx",sheet= 1)
+excel_file
+```
