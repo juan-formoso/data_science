@@ -1,0 +1,70 @@
+---
+title: "Exercício da Aula - Programação (Prática em R)"
+output: html_notebook
+---
+
+If
+```{r}
+a <- 5
+b <- 10
+
+if (a < b) {
+  print("A é menor do que B")
+} else {
+  print("A não é menor que B")
+}
+```
+
+Ifelse
+```{r}
+x <- 12
+
+condition <- ifelse(x == 10, "X é igual a 10", "X não é igual a 10")
+condition
+```
+
+For
+```{r}
+for (index in 1:10) {
+  print(index)
+}
+```
+
+While
+```{r}
+count <- 1
+while(count <= 10) {
+  print(count)
+  count <- count + 1
+}
+```
+
+Funções
+```{r}
+par_ou_impar <- function(n) {
+  return(ifelse(n %% 2 == 0, "O número é par", "O número é ímpar"))
+}
+
+par_ou_impar(6)
+par_ou_impar(9)
+```
+
+Break
+```{r}
+for (index in 1:10) {
+  if (index == 5) {
+    break
+  }
+  print(index)
+}
+```
+
+Next
+```{r}
+for (index in 1:10) {
+  if (index %% 2 == 0) {
+    next
+  }
+  print(index)
+}
+```
