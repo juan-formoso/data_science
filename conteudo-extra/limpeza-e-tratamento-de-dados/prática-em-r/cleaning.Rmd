@@ -1,0 +1,55 @@
+---
+title: "Limpeza e Tratamento de Dados: Taxa de Rotatividade"
+output: html_notebook
+---
+
+```{r}
+# Importando dados, string vazio = NA, string como fatores
+data = read.csv("Churn.csv", sep = ";", na.strings = "", stringsAsFactors = T)
+head(data)
+summary(data)
+```
+Colunas
+```{r}
+# Renomeando as colunas
+colnames(data) = c("Id", "Score", "Estado", "Genero", "Idade", "Patrimonio", "Saldo", "Produtos", "TemCartCredito", "Ativo", "Salario", "Saiu")
+head(data)
+```
+Explorar Dados e Colunas Categóricas
+```{r}
+# Estados
+counts = table(data$Estado)
+barplot(counts, main = "Estados", xlab = "Estados")
+# Genero
+counts = table(data$Genero)
+barplot(counts, main = "Gêneros", xlab = "Gêneros")
+```
+Explorando colunas numéricas
+```{r}
+# Score
+summary(data$Score)
+boxplot(data$Score)
+hist(data$Score)
+```
+
+```{r}
+# Idade
+summary(data$Idade)
+boxplot(data$Idade)
+hist(data$Idade)
+```
+
+```{r}
+# Saldo
+summary(data$Saldo)
+boxplot(data$Saldo)
+hist(data$Saldo)
+```
+
+```{r}
+# Salário
+summary(data$Salario)
+boxplot(data$Salario)
+boxplot(data$Salario, outline = F)
+```
+
