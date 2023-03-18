@@ -99,3 +99,46 @@ data[data$Idade < 0 | data$Idade > 110,]$Idade = median(data$Idade)
 data[data$Idade < 0 | data$Idade > 110,]
 summary(data$Idade)
 ```
+Dados Duplicados
+```{r}
+# buscar dados duplicados pelo ID
+duplicated_data = data[duplicated(data$Id),]
+duplicated_data
+# eliminando o dado duplicado pelo índice
+data = data[-c(82),]
+# busca a linha duplicada
+data[data$Id == duplicated_data$Id,]
+# verifica a duplicação
+duplicated_data = data[duplicated(data$Id),]
+duplicated_data
+```
+Estado fora do domínio
+```{r}
+# fora do domínio - categórico
+unique(data$Estado)
+summary(data$Estado)
+# preencher com a moda - RS
+data[!data$Estado %in% c("RS", "SC", "PR"),]$Estado = "RS"
+summary(data$Estado)
+# removendo levels não utilizados
+data$Estado = factor(data$Estado)
+# visualizar novamente
+summary(data$Estado)
+```
+Oultiers
+```{r}
+# criando parâmetro com desvio padrão - 2x da média
+desv = sd(data$Salario, na.rm = T)
+desv
+data[data$Salario >= 2 * desv,]$Salario
+# visualizando via gráfico
+boxplot(data$Salario)
+boxplot(data$Salario, outline = F)
+x = boxplot(data$Salario)$out
+x
+# substitui pela mediana
+median(data$Salario)
+data[data$Salario >= 2 * desv,]$Salario = median(data$Salario)
+# checa a remoção dos outliers
+data[data$Salario >= 2 * desv,]$Salario
+```
