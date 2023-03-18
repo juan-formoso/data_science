@@ -52,4 +52,50 @@ summary(data$Salario)
 boxplot(data$Salario)
 boxplot(data$Salario, outline = F)
 ```
-
+Tratando valores não disponíveis (NA)
+```{r}
+#vendo os valores
+data[!complete.cases(data),]
+```
+Salários
+```{r}
+#tratar salários
+summary(data$Salario)
+#ver mediana
+median(data$Salario, na.rm = T)
+#atribuir medianas à NAs
+data[is.na(data$Salario),]$Salario = median(data$Salario, na.rm = T)
+#checando remoção
+data[!complete.cases(data$Salario),]
+```
+Falta de padronização em Gênero
+```{r}
+#ver valores
+unique(data$Genero)
+summary(data$Genero)
+#transformar F e Fem em Feminino
+# "" e M em Masculino (moda)
+data[is.na(data$Genero) | data$Genero == "M",]$Genero = "Masculino"
+data[data$Genero == "F" | data$Genero == "Fem",]$Genero = "Feminino"
+#ver resultado
+summary(data$Genero)
+#removendo levels não utilizados
+data$Genero = factor(data$Genero)
+#visualizando novamente
+summary(data$Genero)
+```
+Idades fora do domínio
+```{r}
+summary(data$Idade)
+#vendo idades anormais
+data[data$Idade < 0 | data$Idade > 110,]$Idade
+#verificando NAs
+data[is.na(data$Idade),]
+#mediana
+median(data$Idade)
+#substituindo pela mediana
+data[data$Idade < 0 | data$Idade > 110,]$Idade = median(data$Idade)
+#verificando novamente idades anormais
+data[data$Idade < 0 | data$Idade > 110,]
+summary(data$Idade)
+```
