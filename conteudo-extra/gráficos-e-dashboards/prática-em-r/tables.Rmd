@@ -1,0 +1,27 @@
+---
+title: "Tabelas - Prática em R"
+output: html_notebook
+---
+Instalando pacote stargazer
+```{r}
+#install.packages("stargazer")
+library(stargazer)
+```
+Formato Latex
+```{r}
+#Use um leitor de Latex para ver a tabela: quicklatex.com
+stargazer(iris)
+```
+HTML
+```{r}
+#Use um navegador ou leitor HTML para ver a tabela:  https://codebeautify.org/htmlviewer
+stargazer(iris, type = "html")
+```
+Texto
+```{r}
+stargazer(iris, type = "text")
+```
+Salva em disco
+```{r}
+stargazer(women, out = "women.tex", summary = F)
+```
